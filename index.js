@@ -18,33 +18,34 @@ const options = {
                     text: 'Поддержка клиентов',
                 },
             ]
-        ]
+        ],
+        resize_keyboard: true,
     })
 };
 
 const start = async () => {
-    bot.setMyCommands(commands)
+    // bot.setMyCommands(commands)
 
     bot.onText(/\/start/, (msg) => {
         try {
             const chatId = msg.chat.id;
-        bot.sendMessage(chatId, 'Привет!');
+        bot.sendMessage(chatId, 'Привет!', options);
         } catch (error) {
             console.log(error)
         }
         
     });
     
-    bot.onText(/\/order/, (msg)=>{
-        try {
-            const chatId = msg.chat.id;
-            bot.sendMessage(chatId, 'Нажми на кнопку', options)
-        } catch (error) {
-            console.log(error)
-        }
-        // const chatId = msg.chat.id;
+    // bot.onText(/\/order/, (msg)=>{
+    //     try {
+    //         const chatId = msg.chat.id;
+    //         bot.sendMessage(chatId, 'Нажми на кнопку', options)
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
+    //     // const chatId = msg.chat.id;
         
-    })
+    // })
 
     bot.onText('Поддержка клиентов: @delivery_support_24', async msg => {
 

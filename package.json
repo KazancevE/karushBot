@@ -1,0 +1,18 @@
+{
+  "name": "karushbot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.66.0",
+    "nodejs": "^0.0.0",
+    "nodemon": "^3.1.7",
+    "telegram-bot-api": "^2.0.1"
+  }
+}

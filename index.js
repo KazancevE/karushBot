@@ -13,7 +13,10 @@ const options = {
                 {
                     text: 'Сделать заказ',
                     web_app: {url: urlWeb} // url сайта
-                }
+                },
+                {
+                    text: 'Поддержка клиентов',
+                },
             ]
         ]
     })
@@ -41,6 +44,12 @@ const start = async () => {
         }
         // const chatId = msg.chat.id;
         
+    })
+
+    bot.onText('Поддержка клиентов: @delivery_support_24', async msg => {
+
+        bot.sendMessage(chatId, 'Контакты тех.поддержки @', options)
+    
     })
 }
 

@@ -4,7 +4,7 @@ const { token, urlWeb } = require('./config.js');
 const bot = new TelegramBot(token, { polling: true });
 
 const commands = [
-    {command: '/order', description: 'Сделать заказ'}
+    // {command: '/order', description: 'Сделать заказ'}
 ]
 const options = {
     reply_markup: JSON.stringify({
@@ -24,7 +24,7 @@ const options = {
 };
 
 const start = async () => {
-    // bot.setMyCommands(commands)
+    bot.setMyCommands(commands)
 
     bot.onText(/\/start/, (msg) => {
         try {

@@ -47,9 +47,9 @@ const start = async () => {
         
     // })
 
-    bot.onText('Поддержка клиентов: @delivery_support_24', async msg => {
+    bot.onText('Поддержка клиентов', async msg => {
 
-        bot.sendMessage(chatId, 'Контакты тех.поддержки @', options)
+        bot.sendMessage(chatId, 'Контакты тех.поддержки  @delivery_support_24', options)
     
     })
 }

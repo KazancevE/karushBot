@@ -52,6 +52,10 @@ const start = async () => {
         bot.sendMessage(chatId, 'Контакты тех.поддержки  @delivery_support_24', options)
     
     })
+
+    bot.on('message', msg => {
+        console.log(msg);
+    })
 }
 
 start();
